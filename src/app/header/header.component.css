@@ -1,0 +1,64 @@
+header {
+  height: 74px !important;
+}
+mat-toolbar {
+  height: inherit;
+}
+mat-toolbar-row {
+  display: flex;
+  justify-content: center;
+}
+.brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 180px;
+  height: 46px;
+}
+.brand__heading {
+  font-family: "Star Jedi";
+  font-size: 32px;
+}
+.brand__line {
+  margin: 0;
+  position: absolute;
+  padding: 0;
+  top: 46px;
+  width: 208px;
+  border: 1.5px solid;
+}
+.brand__subheading {
+  font-family: "Star Jedi";
+  line-height: 12px;
+  position: absolute;
+  font-size: 13px;
+  letter-spacing: 4px;
+  top: 48px;
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    height: 64px !important;
+  }
+  .mat-toolbar {
+    height: inherit;
+  }
+  .brand {
+    height: 48px;
+    width: 150px;
+  }
+  .brand__heading {
+    font-size: 20px;
+  }
+  .brand__line {
+    top: 35px;
+    width: 130px;
+    border: 1.1px solid;
+  }
+  .brand__subheading {
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding-right: 3px;
+    top: 35px;
+  }
+}
