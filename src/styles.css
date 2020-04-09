@@ -1,1 +1,81 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Star Jedi';
+  src: url('src/assets/fonts/StarJedi.woff2') format('woff2'),
+       url('src/assets/fonts/StarJedi.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Ropa Sans', sans-serif;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header header"
+    "side content content"
+    "footer footer footer";
+  height: 100vh;
+  max-width: 1660px;
+  margin-right: auto;
+  margin-left: auto;}
+
+app-header {
+  grid-area: header;
+  text-align: center;
+}
+
+details,
+app-main {
+  grid-area: content;
+  background-color: #F4CE46;
+  margin: 2rem;
+  padding: 25px;
+}
+
+app-side {
+  grid-area: side;
+  background-color: #2A92BF;
+}
+
+app-footer {
+  grid-area: footer;
+  text-align: center;
+}
+
+ul li {
+  color: white;
+}
+ul li a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 991px) {
+  app-side {
+    margin: 0;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "content"
+      "side"
+      "footer";
+    grid-template-rows:auto minmax(60px, auto) 1fr minmax(70px, auto) auto;
+  }
+}
