@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'https://swapi.co/api/people/',
+  localUrl: '/assets/data/characters.json',
 };
 
 /*
