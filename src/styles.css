@@ -92,6 +92,10 @@ ul li a {
   app-side {
     margin: 0;
   }
+  main {
+    margin: 10px;
+    padding: 10px;
+  }
 
   .container {
     grid-template-columns: 1fr;

@@ -13,8 +13,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSelectModule } from '@angular/material/select';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -29,10 +29,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatBadgeModule,
     MatListModule,
     MatGridListModule,
-    MatAutocompleteModule,
+    MatFormFieldModule,
     MatSelectModule,
     MatChipsModule,
-    MatTooltipModule,
+    MatInputModule,
     MatProgressBarModule,
     MatPaginatorModule,
     MatCardModule,
@@ -46,10 +46,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatBadgeModule,
     MatListModule,
     MatGridListModule,
-    MatAutocompleteModule,
+    MatFormFieldModule,
     MatSelectModule,
     MatChipsModule,
-    MatTooltipModule,
+    MatInputModule,
     MatProgressBarModule,
     MatPaginatorModule,
     MatCardModule,

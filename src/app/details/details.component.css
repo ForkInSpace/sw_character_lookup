@@ -1,0 +1,51 @@
+md-card-header {
+  width: 300px;
+  margin-right: 20px;
+}
+.inline-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.large-image {
+  max-width: 300px;
+  width: 100%;
+  max-height: 300px;
+  height: auto;
+  border: 2px solid #ffeb3b;
+}
+.rounded-corners {
+  border-radius: 10px;
+}
+.padding-30 {
+  padding:30px;
+}
+.baseline {
+  align-items: baseline;
+}
+
+
+@media (max-width: 991px) {
+  .reverse {
+    flex-direction: column-reverse !important;
+  }
+  md-card-header {
+    width: 100%;
+    margin-right:0;
+  }
+  .large-image {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ffeb3b;
+    align-self:center;
+  }
+  .rounded-corners {
+    border-radius: 5px;
+  }
+  .padding-30 {
+    padding:10px;
+  }
+  h3 {
+    margin: 0;
+    padding: 0;
+  }
+}

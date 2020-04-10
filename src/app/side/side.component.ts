@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Pipe, PipeTransform } from '@angular/core';
 
 import { CharactersService } from '../characters.service';
 
@@ -9,22 +9,30 @@ import { CharactersService } from '../characters.service';
   providers: [CharactersService]
 })
 export class SideComponent implements OnInit {
-
+  searchWord: string;
+  query: string;
   public characters = [];
 
   constructor(private _characterService: CharactersService){}
-
-  opened = true;
-
-  fontFam = 'Star Jedi';
-  rippleColor = 'yellow';
-  cols = 2;
 
   ngOnInit() {
     this._characterService.getMockCharacters()
       .subscribe(data => this.characters = data);
     // this.characters = this._characterService.getCharacters;
-    console.log(this.characters);
+  }
+
+  filterList() {
+    let word = this.searchWord;
+    this.characters = this.characters.filter((c) => {
+      console.log(c.name.includes(word));
+      return c.name.includes(word);
+    });
+  }
+
+  @Output() emitCharacter: EventEmitter<any> = new EventEmitter();
+
+  sendData(data){
+    this.emitCharacter.emit(data);
   }
 
 }

@@ -1,9 +1,27 @@
 <main>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Nullam dolor velit, suscipit vel ultricies id, ultrices
-    augue. Aliquam volutpat, nunc id pulvinar tincidunt, leo nunc feugiat libero, quis luctus lectus ipsum et enim.
-    Suspendisse potenti. Nullam ultricies congue magna non mattis. Cras enim velit, gravida in sem id, malesuada
-    efficitur augue. Vivamus ullamcorper tincidunt tempus.
-  </p>
+  <mat-card class="card-light" *ngIf="!capturedCharacter">
+    <h2>Click on any of the character cards on the left, to view their details</h2>
+  </mat-card>
+  <mat-card class="card-light" *ngIf="capturedCharacter">
+    <div class="inline-flex padding-30 reverse">
+      <md-card-header>
+        <span class="inline-flex baseline">Name: <h1>{{ capturedCharacter.name || '-'}}</h1></span>
+        <span class="inline-flex baseline">Height: <h3>{{ capturedCharacter.height || '-'}}</h3></span>
+        <span class="inline-flex baseline">Mass: <h3>{{ capturedCharacter.mass || '-'}}</h3></span>
+        <span class="inline-flex baseline">Hair color:<h3>{{ capturedCharacter.hair_color || '-'}}</h3></span>
+        <span class="inline-flex baseline">Skin color:<h3>{{ capturedCharacter.skin_color || '-'}}</h3></span>
+        <span class="inline-flex baseline">Eye color: <h3>{{ capturedCharacter.eye_color || '-'}}</h3></span>
+        <span class="inline-flex baseline">Birth year:<h3>{{ capturedCharacter.birth_year || '-'}}</h3></span>
+        <span class="inline-flex baseline">Gender: <h3>{{ capturedCharacter.gender || '-'}}</h3></span>
+
+        <mat-card-subtitle>
+          <span class="inline-flex baseline">Created: <h3>{{ (capturedCharacter.created | date: 'fullDate' )|| '-'}}</h3></span>
+          <span class="inline-flex baseline">Edited: <h3>{{ (capturedCharacter.edited | date: 'fullDate' ) || '-'}}</h3></span>
+        </mat-card-subtitle>
+      </md-card-header>
+      <div>
+        <img class="large-image rounded-corners" [src]="'../assets/images/55.jpg'">
+      </div>
+    </div>
+  </mat-card>
 </main>

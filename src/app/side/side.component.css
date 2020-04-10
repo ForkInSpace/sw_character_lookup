@@ -1,3 +1,26 @@
+ul {
+  padding: 0;
+}
+ul a {
+  outline: none;
+  text-decoration: none;
+}
 .card-light {
   background-color: #9e9e9e;
 }
+.search-card {
+  margin-top: 15px;
+  background-color: white;
+
+}
+.search-input {
+  width:calc(100% - 14px);
+  height: 38px;
+  line-height: 24px;
+  font-size: 18px;
+  font-family: 'Ropa Sans', sans-serif;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+

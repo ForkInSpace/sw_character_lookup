@@ -1,9 +1,9 @@
 <div class="container">
   <app-header></app-header>
 
-  <app-side></app-side>
+  <app-side (emitCharacter)="getData($event)"></app-side>
 
-  <router-outlet></router-outlet>
+  <app-details [capturedCharacter]="characterData"></app-details>
 
   <app-footer></app-footer>
 </div>
