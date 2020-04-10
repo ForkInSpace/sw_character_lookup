@@ -26,6 +26,12 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('sw-app');
   });
 
+  it(`should have a non empty array 'characterData'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.getData).toHaveBeenCalled();
+  });
+
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();

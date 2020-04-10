@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 
-import { environment } from './../environments/environment';
-import { ACharacter } from './characters.interface';
+import {environment} from './../environments/environment';
+import {ACharacter} from './characters.interface';
 
 
 @Injectable({
@@ -21,7 +21,11 @@ export class CharactersService {
     return this.http.get<ACharacter[]>(this.localUrl);
   }
 
-  // getAllCharacters = async (pageNo = 8) => {
+  //
+  // loop thru the available pages on SWAPI and gets all the characters asynchronously
+  //
+
+  // getAllCharacters = async (pageNo = 1) => {
   //   let actualUrl = this.URL + `?page=${pageNo}`;
   //   let apiResults = await fetch(actualUrl)
   //   .then(resp => {
@@ -31,7 +35,7 @@ export class CharactersService {
   //   return apiResults.results;
   // }
   //
-  // getEntireList = async (pageNo = 8) => {
+  // getEntireList = async (pageNo = 1) => {
   //   var results = await this.getAllCharacters(pageNo);
   //   console.log("Retreiving data from API for page : " + pageNo);
   //   if (results && results.length>0) {

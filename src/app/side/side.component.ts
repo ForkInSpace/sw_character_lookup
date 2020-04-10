@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output, Pipe, PipeTransform } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 import { CharactersService } from '../characters.service';
 
@@ -9,7 +9,6 @@ import { CharactersService } from '../characters.service';
   providers: [CharactersService]
 })
 export class SideComponent implements OnInit {
-  searchWord: string;
   query: string;
   public characters = [];
 
@@ -17,15 +16,29 @@ export class SideComponent implements OnInit {
 
   ngOnInit() {
     this._characterService.getMockCharacters()
-      .subscribe(data => this.characters = data);
+      .subscribe(data => {
+        // return this.characters = data;
+        this.characters = data.map((item, index) => {
+          return {
+                id: index,
+                name: item.name,
+                height: item.height,
+                mass: item.mass,
+                hair_color: item.hair_color,
+                skin_color: item.skin_color,
+                eye_color: item.eye_color,
+                birth_year: item.birth_year,
+                gender: item.gender,
+                created: item.created,
+                edited: item.edited
+              };
+        });
+        return this.characters;
+      });
     // this.characters = this._characterService.getCharacters;
-  }
 
-  filterList() {
-    let word = this.searchWord;
-    this.characters = this.characters.filter((c) => {
-      console.log(c.name.includes(word));
-      return c.name.includes(word);
+    this.characters = this.characters.map((item, index) => {
+      return item.id = index;
     });
   }
 
