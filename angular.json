@@ -22,7 +22,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/characters.json"
+              "src/assets/data/characters.json"
             ],
             "styles": [
               "src/custom-theme.scss",
