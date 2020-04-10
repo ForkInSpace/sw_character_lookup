@@ -11,13 +11,37 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Ropa Sans', sans-serif;
+  /*background-image: url('src/assets/images/deathStar.jpg');*/
+  /*background-color: rgba(0,0,0, .4);*/
+  /*background-position: center;*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: cover;*/
+}
+
+body::after {
+  content: "";
+  background-image: url('src/assets/images/deathStar.jpg');
+  *background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
 }
 
 .flex {
   display: flex;
   justify-content: center;
 }
-
+/*
+*
+*     Layout Styles
+*
+*/
 .container {
   display: grid;
   grid-template-columns: 400px 1fr;
@@ -37,16 +61,16 @@ app-header {
 }
 
 details,
-app-main {
+main {
   grid-area: content;
-  background-color: #F4CE46;
   margin: 2rem;
   padding: 25px;
 }
 
 app-side {
   grid-area: side;
-  background-color: #2A92BF;
+  overflow-y: scroll;
+  background-color: #9e9e9e;
 }
 
 app-footer {
@@ -79,3 +103,8 @@ ul li a {
     grid-template-rows:auto minmax(60px, auto) 1fr minmax(70px, auto) auto;
   }
 }
+/*
+*
+* End Layout Styles
+*
+*/
