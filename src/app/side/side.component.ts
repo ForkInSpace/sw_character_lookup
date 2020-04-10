@@ -36,10 +36,6 @@ export class SideComponent implements OnInit {
         return this.characters;
       });
     // this.characters = this._characterService.getCharacters;
-
-    this.characters = this.characters.map((item, index) => {
-      return item.id = index;
-    });
   }
 
   @Output() emitCharacter: EventEmitter<any> = new EventEmitter();

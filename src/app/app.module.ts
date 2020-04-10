@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 import { AngularMaterialModule } from './angular-material.module';
 import { HeaderComponent } from './header/header.component';
 import { SideComponent } from './side/side.component';
-import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { DetailsComponent } from './details/details.component';
 import { CharactersService } from './characters.service';
@@ -21,7 +20,6 @@ import { SearchPipe } from './search.pipe';
     AppComponent,
     HeaderComponent,
     SideComponent,
-    MainComponent,
     FooterComponent,
     DetailsComponent,
     SearchPipe
